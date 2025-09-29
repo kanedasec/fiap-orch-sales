@@ -1,5 +1,3 @@
-version: "3.9"
-
 services:
   fiap-orch-sales:
     build: .
@@ -8,16 +6,12 @@ services:
     ports:
       - "8004:8004"
     environment:
-      - BUYERS_BASE_URL=http://fiap-srv-buyers:8002
-      - VEHICLES_BASE_URL=http://fiap-srv-vehicles:8000
-      - PAYMENTS_BASE_URL=http://fiap-srv-payment:8003
-      - KEYCLOAK_BASE_URL=http://keycloak:8080
+      - BUYERS_BASE_URL=http://localhost:8002
+      - VEHICLES_BASE_URL=http://localhost:8000
+      - PAYMENTS_BASE_URL=http://localhost:8003
+      - KEYCLOAK_BASE_URL=http://localhost:8080
       - KEYCLOAK_REALM=fiap-realm
       - KEYCLOAK_CLIENT_ID=fiap-orch-sales
       - KEYCLOAK_CLIENT_SECRET=super-secret
       - HTTP_TIMEOUT_SECS=10
-    depends_on:
-      - fiap-srv-buyers
-      - fiap-srv-vehicles
-      - fiap-srv-payment
-      - keycloak
+
