@@ -6,12 +6,12 @@ services:
     ports:
       - "8004:8004"
     environment:
-      - BUYERS_BASE_URL=http://localhost:8002
-      - VEHICLES_BASE_URL=http://localhost:8000
-      - PAYMENTS_BASE_URL=http://localhost:8003
-      - KEYCLOAK_BASE_URL=http://localhost:8080
+      - BUYERS_BASE_URL=http://172.17.0.1:8002
+      - VEHICLES_BASE_URL=http://172.17.0.1:8000
+      - PAYMENTS_BASE_URL=http://172.17.0.1:8003
+      - KEYCLOAK_BASE_URL=http://172.17.0.1:8080
       - KEYCLOAK_REALM=fiap-realm
-      - KEYCLOAK_CLIENT_ID=fiap-orch-sales
-      - KEYCLOAK_CLIENT_SECRET=super-secret
+      - KEYCLOAK_CLIENT_ID=fiap-orch-client
+      - KEYCLOAK_CLIENT_SECRET=cmZ1SzDaemfwpIS7N6ZYysiBUTXZmS32
       - HTTP_TIMEOUT_SECS=10
 
